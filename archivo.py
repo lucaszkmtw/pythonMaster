@@ -21,7 +21,7 @@ file1.close()
 
 
 
-def modificar(list_of_lines):
+def modificar(list_of_lines, nuevalinea):
     # a_file = open("prueba.txt", "r")
     # list_of_lines = a_file.readlines()
 
@@ -29,9 +29,13 @@ def modificar(list_of_lines):
     for linea in range(0, len(list_of_lines)):
     
         if list_of_lines[linea][0:4] == 'M006':
-            list_of_lines[linea] = list_of_lines[linea].replace('M006' ,'M009') + '\n'
+            list_of_lines[linea] = list_of_lines[linea].replace('M006' ,nuevalinea) + '\n'
     a_file = open("myfile.txt", "w")
     a_file.writelines(list_of_lines)  
     a_file.close()
 
-modificar(lista)
+nuevo = input('ingrese porque cambiar')
+
+
+modificar(lista, nuevo)
+

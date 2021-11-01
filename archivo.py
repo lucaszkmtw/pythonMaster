@@ -15,28 +15,23 @@ for line in file1:
 # Closing files
 file1.close()
 
-
 # nuevo = lista[1]
 # nuevo1 = nuevo[4:8]
 # print(nuevo1)
 
 
 
-def modificar():
-    a_file = open("prueba.txt", "r")
-    list_of_lines = a_file.readlines()
+def modificar(list_of_lines):
+    # a_file = open("prueba.txt", "r")
+    # list_of_lines = a_file.readlines()
 
     # list_of_lines[1] = "Line2"
     for linea in range(0, len(list_of_lines)):
     
         if list_of_lines[linea][0:4] == 'M006':
-            list_of_lines[linea] = 'M007\n'
-
-        
-
-
+            list_of_lines[linea] = list_of_lines[linea].replace('M006' ,'M009') + '\n'
     a_file = open("myfile.txt", "w")
     a_file.writelines(list_of_lines)  
     a_file.close()
 
-modificar()
+modificar(lista)

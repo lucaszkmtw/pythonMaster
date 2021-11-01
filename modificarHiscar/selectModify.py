@@ -1,14 +1,6 @@
 from archivo import fileOpen
-
-
-
-codigo = {
-    'reparticion': {'dd':0, 'ht': 3},
-    'cargo': {'dd':4, 'ht': 8},
-    'basico': {'dd':9, 'ht': 16},
-    }
-
 codigos = fileOpen()
+
 cargos =[]
 reparticion= []
 basico = []
@@ -45,11 +37,8 @@ def modificar(lineas, vie, act):
     a_file = open("myfile.txt", "w")
     a_file.writelines(lista_nueva)  
     a_file.close()
-
-#busqueda= input('ingrese el cargo :  ')
-
-#visualizar(busqueda,cargos,codigos)
-
 viejo = input('que cargo modifico')
 nuevo = input(' porque lo modifico')
 modificar(codigos, viejo, nuevo)
+#manjear keys en dicccionario
+#attr = linea[pos['dd']:pos['ht']]

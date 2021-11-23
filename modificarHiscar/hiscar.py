@@ -1,9 +1,11 @@
 import datetime
 begin_time = datetime.datetime.now()
 count = 0
+
 lista= []
 fileNumber = 0
 file1 = open('HISCARLARGA.2021-Aug-02.115001', 'r')
+
 
 for file in file1:
     linea = "{}".format(file.strip())
@@ -28,7 +30,7 @@ for file in file1:
         count = 0
     #fin for
 if count < 399999:
-    outFile = open("MUNICIPIO2021/hiscarMUN_ultima.txt", "w")
+    outFile = open(f'MUNICIPIO2021/hiscarMUN_{fileNumber}.txt', "w")
     outFile.writelines(lista)
     tiempo= datetime.datetime.now() - begin_time
     print("proceso finalizado en : " ,tiempo)
